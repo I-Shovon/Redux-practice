@@ -9,21 +9,21 @@ export default function Navbar() {
       <ul className="h-full  mx-auto flex justify-between items-center gap-3 font-semibold text-indigo-900">
         <h1 className="flex-1">Moon Tech</h1>
         <li>
-          <Link href="/">Home</Link>
+          <Link href="/simpleproject">Home</Link>
         </li>
         <li>
-          <Link href="/top-rated">Top Rated</Link>
+          <Link href="/simpleproject/top-rated">Top Rated</Link>
         </li>
         <li>
-          <Link href="/about">About</Link>
+          <Link href="/simpleproject/about">About</Link>
         </li>
         <li title="Wishlist" className="bg-indigo-500 p-2 rounded-full">
-          <Link href="/order">
+          <Link href="/simpleproject/order">
             <Icon icon="ph:note-bold" />
           </Link>
         </li>
         <li title="cart" className="bg-indigo-500 p-2 rounded-full">
-          <Link href="/cart">
+          <Link href="/simpleproject/cart">
             <Icon icon="mdi:cart" />
           </Link>
         </li>
