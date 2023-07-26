@@ -5,8 +5,6 @@ import { useReducer } from "react";
 import { initialState, reducer } from "../State/formReducer";
 
 export default function AboutPage() {
-
-
   const [state, dispatch] = useReducer(reducer, initialState);
   const submit = (e) => {
     e.preventDefault();
@@ -14,10 +12,15 @@ export default function AboutPage() {
   };
   return (
     <div className="text-center items-center justify-between p-24">
-      <h1>This is about page</h1>
-      <Link href="/">Home</Link>
+      <h1 className="mb-5">This is about page</h1>
+      <Link
+        className="br-purple-600 rounded-sm p-5 my-10 hover:bg-red-400 hover:text-purple-500"
+        href="/"
+      >
+        Home
+      </Link>
 
-      <div className="h-screen bg-green-600 text-black rounded flex justify-center items-center overflow-auto">
+      <div className="h-screen bg-green-600 text-black rounded mt-5 flex justify-center items-center overflow-auto">
         <form
           className="shadow-lg p-10 rounded-md flex flex-wrap gap-3 max-w-3xl justify-between"
           onSubmit={submit}
@@ -183,16 +186,16 @@ export default function AboutPage() {
               <input
                 className="mr-3"
                 type="checkbox"
-                name="term"
-                id="terms"
+                name="checked"
+                id="checked"
                 onClick={() => dispatch({ type: "TOGGLE" })}
               />
-              <label for="terms">I agree to terms and conditions</label>
+              <label for="checked">I agree to checked and conditions</label>
             </div>
             <button
               className=" px-4 py-3 bg-indigo-500 rounded-md font-semibold text-white text-lg disabled:bg-gray-500"
               type="submit"
-              disabled={!state.term}
+              disabled={!state.checkbox}
             >
               Submit
             </button>

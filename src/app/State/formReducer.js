@@ -8,10 +8,9 @@ export const initialState = {
   education: "",
   quantity: 0,
   feedback: "",
-  term: false,
+  checkbox: false,
 };
 export const reducer = (state, action) => {
-  console.log(action);
   switch (action.type) {
     case actionTypes.INPUT:
       return {
@@ -21,8 +20,7 @@ export const reducer = (state, action) => {
     case actionTypes.TOGGLE:
       return {
         ...state,
-        term: !state,
-        term,
+        checkbox: !state.checkbox,
       };
     default:
       return state;
