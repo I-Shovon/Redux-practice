@@ -8,7 +8,6 @@ export default function AboutPage() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const submit = (e) => {
     e.preventDefault();
-    console.log(state);
   };
   return (
     <div className="text-center items-center justify-between p-24">
